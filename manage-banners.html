@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionar Banners</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>Gestionar Banners</h1>
+    <nav>
+      <a href="dashboard.html">Volver al Panel</a>
+      <a href="#" id="logout-link">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Nuevo Banner</h2>
+      <form id="banner-form">
+        <div class="form-group">
+          <label for="title">Título:</label>
+          <input type="text" id="title" required>
+        </div>
+        <div class="form-group">
+          <label for="image-url">URL de la imagen:</label>
+          <input type="url" id="image-url" required>
+        </div>
+        <div class="form-group">
+          <label for="target-url">URL de destino:</label>
+          <input type="url" id="target-url" required>
+        </div>
+        <div class="form-group">
+          <label for="is-active">Activo:</label>
+          <input type="checkbox" id="is-active" checked>
+        </div>
+        <button type="submit" class="btn">Guardar Banner</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Mis Banners</h2>
+      <div id="banners-list" class="banners-grid">
+        <!-- Lista de banners se cargará aquí -->
+      </div>
+    </section>
+  </main>
+
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/banners.js"></script>
+</body>
+</html>

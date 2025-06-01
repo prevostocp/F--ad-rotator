@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Control</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>Panel de Control</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="#" id="logout-link">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dashboard-section">
+      <h2>Mis Banners</h2>
+      <div id="user-banners-stats"></div>
+      <a href="manage-banners.html" class="btn">Gestionar Banners</a>
+    </section>
+
+    <section class="dashboard-section">
+      <h2>Mis Anuncios</h2>
+      <div id="user-ads-stats"></div>
+      <a href="manage-ads.html" class="btn">Gestionar Anuncios</a>
+    </section>
+
+    <section class="dashboard-section">
+      <h2>Mi Enlace Público</h2>
+      <div class="public-link">
+        <input type="text" id="public-link" readonly>
+        <button id="copy-link" class="btn">Copiar</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

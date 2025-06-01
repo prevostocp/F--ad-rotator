@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad & Banner Rotator</title>  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/ads-banners.css">
+</head>
+<body>
+  <header>
+    <h1>Publicidad</h1>
+    <nav>
+      <a href="dashboard.html" id="dashboard-link" style="display: none;">Panel de Control</a>
+      <a href="login.html" id="login-link">Iniciar Sesión</a>
+      <a href="register.html" id="register-link">Registrarse</a>
+      <a href="#" id="logout-link" style="display: none;">Cerrar Sesión</a>      
+    </nav>
+  </header>
+
+  <main>
+    <section id="featured-ads-top" class="ads-container">
+      <!-- Ads destacados (arriba) -->
+    </section>
+
+    <section id="user-ads" class="ads-container">
+      <!-- Ads del usuario -->
+    </section>
+
+    <section id="featured-ads-bottom" class="ads-container">
+      <!-- Ads destacados (abajo) -->
+    </section>
+
+    <div class="separator">Banners</div>
+
+    <section id="featured-banners-top" class="banners-container">
+      <!-- Banners destacados (arriba) -->
+    </section>
+
+    <section id="user-banners" class="banners-container">
+      <!-- Banners del usuario -->
+    </section>
+
+    <section id="featured-banners-bottom" class="banners-container">
+      <!-- Banners destacados (abajo) -->
+    </section>
+  </main>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm"></script>
+  <script type="module" src="js/supabase.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/display.js"></script>
+  <script type="module" src="js/index.js"></script> 
+</body>
+</html>
