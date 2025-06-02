@@ -59,6 +59,7 @@
           await signIn(email, password);
           window.location.href = 'dashboard.html';
         } catch (error) {
+          console.log(error.message)
           alert('Error al iniciar sesión: ' + error.message);
         }
       });

@@ -38,9 +38,11 @@
     </section>
   </main>
 
-  <script src="js/supabase.js"></script>
-  <script src="js/auth.js"></script>
-  <script>
+  <!-- <script  type="module" src="js/supabase.js"></script> -->
+  <script  type="module" src="js/auth.js"></script>
+  <script type="module" >
+    import { signUp } from './js/auth.js';
+
     document.addEventListener('DOMContentLoaded', () => {
       const registerForm = document.getElementById('register-form');
 
@@ -60,6 +62,7 @@
           alert('Registro exitoso! Por favor verifica tu correo electrónico.');
           window.location.href = 'login.html';
         } catch (error) {
+          console.log(error.message)
           alert('Error al registrarse: ' + error.message);
         }
       });

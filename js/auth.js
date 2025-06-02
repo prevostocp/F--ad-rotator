@@ -7,19 +7,20 @@ export async function signUp(email, password) {
         password
     });
 
+    console.log(error)
     if (error) throw error;
     return user;
 }
 
 // Iniciar sesión con email y contraseña
 export async function signIn(email, password) {
-    const { user, error } = await supabase.auth.signIn({
-        email,
-        password
+    const { data, error } = await supabase.auth.signInWithPassword({
+        email: email,
+        password: password
     });
 
     if (error) throw error;
-    return user;
+    return data.user;
 }
 
 // Iniciar sesión con GitHub
